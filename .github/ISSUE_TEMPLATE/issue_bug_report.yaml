@@ -1,16 +1,12 @@
-name: "Bug Report: bug:"
-title: "BUG - Descrição Resumida"
+name: "Bug Report :bug:"
+title: "Título - Descrição Resumida"
 description: "Reporte de problemas e funcionalidades não conforme"
 labels: bug 💊
 body:
   - type: markdown
     attributes:
       value: |
-        1. Descrições devem ser em portugues ou ingles.
-        2. Sempre informe a versão do APP que está com o problema e 
-           confirme que a questão/problema não foi já reportado.
-        3. Coloque o maximo de informações possiveis para que os desenvolvedores consigam replicar
-           o problema ou questionamento.
+        Antes de enviar um novo problema, siga a lista de verificação e tente encontrar a resposta.
   - type: checkboxes
     id: docs
     attributes:
@@ -38,7 +34,7 @@ body:
       label: Conversa com Desenvolvimento
       options:
         - label: Busquei informações com a equipe de desenvolvimento e/ou a equipe de manutenção da engenharia e não se tem conhecimento ou solução para o problema.
-          required: true
+          required: true 
   - type: textarea
     id: description
     attributes:
@@ -74,23 +70,36 @@ body:
         3. ...
     validations:
       required: true
-  - type: input
-    id: firm-version
+  - type: markdown
     attributes:
-      label: Versão do Firmware
-      description: Versão do Firmware onde o problema ocorreu
+      value: |
+        ## Ambiente
+  - type: input
+    id: clp-firm-version
+    attributes:
+      label: CLP Firmware
+      description: Nome e versão do CLP Firmware onde o problema ocorreu
+      placeholder: Convencional - 01.03.00035
     validations:
       required: true
   - type: input
-    id: dfu-version
+    id: web-firm-version
     attributes:
-      label: Versão do DFU
-      description: Versão do DFU onde o problema ocorreu
+      label: Web Firmware
+      description: Nome e versão do Web Firmwar onde o problema ocorreu
+      placeholder: EM1206 - 3.60.06
   - type: input
-    id: ac-model
+    id: web-app-version
     attributes:
-      label: Modelo do AR
-      description: Modelo do AR onde o problema ocorreu
+      label: Web Aplicativo
+      description: Nome e versão do Web Aplicativo onde o problema ocorreu
+      placeholder: NCC - 2.16.0087
+  - type: input
+    id: model
+    attributes:
+      label: Modelo do dispositivo
+      description: Modelo do dispositivo
+      placeholder: Conflex Light GSM
   - type: dropdown
     id: repete
     attributes:
