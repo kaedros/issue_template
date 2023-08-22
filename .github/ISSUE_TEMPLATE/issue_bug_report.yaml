@@ -6,6 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
+        ## Instruções \
         Antes de enviar um novo problema, siga a lista de verificação e tente encontrar a resposta.
   - type: checkboxes
     id: docs
@@ -35,6 +36,11 @@ body:
       options:
         - label: Busquei informações com a equipe de desenvolvimento e/ou a equipe de manutenção da engenharia e não se tem conhecimento ou solução para o problema.
           required: true 
+  
+  - type: markdown
+    attributes:
+      value: |
+        ## Problema 
   - type: textarea
     id: description
     attributes:
@@ -70,6 +76,7 @@ body:
         3. ...
     validations:
       required: true
+  
   - type: markdown
     attributes:
       value: |
@@ -83,6 +90,12 @@ body:
     validations:
       required: true
   - type: input
+    id: model
+    attributes:
+      label: Modelo do dispositivo
+      description: Modelo do dispositivo
+      placeholder: Conflex Light GSM  
+  - type: input
     id: web-firm-version
     attributes:
       label: Web Firmware
@@ -94,29 +107,27 @@ body:
       label: Web Aplicativo
       description: Nome e versão do Web Aplicativo onde o problema ocorreu
       placeholder: NCC - 2.16.0087
-  - type: input
-    id: model
+
+  - type: markdown
     attributes:
-      label: Modelo do dispositivo
-      description: Modelo do dispositivo
-      placeholder: Conflex Light GSM
-  - type: dropdown
-    id: repete
-    attributes:
-      label: O bug ocorre SEMPRE que os passos descritos foram realizados?
-      options:
-        - "Sim"
-        - "Não"
-    validations:
-      required: true
+      value: |
+        ## Desenvolvimento 
   - type: textarea
     id: logs
     attributes:
       label: Logs de Debug
-      description: Se possivel e relevante inclua os logs do ESP
-      value: "```LOGS AQUI```"
+      description: Se possivel e relevante inclua os logs
   - type: textarea
     id: extra
     attributes:
       label: Informações Complementares
-      description: Adicione informações complementares como modelo do chip, versão do compilador e SDK IDF, SO usado na compilação, etc...
+  - type: input
+    id: pic-model
+    attributes:
+      label: Modelo do PIC
+      value: PIC24FJ256GB110
+  - type: input
+    id: compiler
+    attributes:
+      label: Versão do compilador
+      value: CCS 4.104
