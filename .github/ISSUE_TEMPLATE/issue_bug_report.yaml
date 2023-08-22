@@ -6,8 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Instruções \
-        Antes de enviar um novo problema, siga a lista de verificação e tente encontrar a resposta.
+        ## Instruções
+        Antes de enviar um novo problema, siga a lista de verificação e tente encontrar a resposta:
   - type: checkboxes
     id: docs
     attributes:
