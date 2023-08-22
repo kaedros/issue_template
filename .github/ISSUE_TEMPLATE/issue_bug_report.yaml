@@ -1,0 +1,113 @@
+name: "Bug Report: bug:"
+title: "BUG - Descrição Resumida"
+description: "Reporte de problemas e funcionalidades não conforme"
+labels: bug 💊
+body:
+  - type: markdown
+    attributes:
+      value: |
+        1. Descrições devem ser em portugues ou ingles.
+        2. Sempre informe a versão do APP que está com o problema e 
+           confirme que a questão/problema não foi já reportado.
+        3. Coloque o maximo de informações possiveis para que os desenvolvedores consigam replicar
+           o problema ou questionamento.
+  - type: checkboxes
+    id: docs
+    attributes:
+      label: Leitura de Documentação
+      options:
+        - label: Eu li a documentação (Wiki) e o problema não foi abordado.
+          required: true
+  - type: checkboxes
+    id: firm-update
+    attributes:
+      label: Firmware Atualizado
+      options:
+        - label: Eu atualizei meu firmware para a versão mais recente e verifiquei se o problema ainda está presente.
+          required: true
+  - type: checkboxes
+    id: git-search
+    attributes:
+      label: Busquei Issues
+      options:
+        - label: Pesquisei no git por um problema semelhante e não encontrei.
+          required: true
+  - type: checkboxes
+    id: dev-search
+    attributes:
+      label: Conversa com Desenvolvimento
+      options:
+        - label: Busquei informações com a equipe de desenvolvimento e/ou a equipe de manutenção da engenharia e não se tem conhecimento ou solução para o problema.
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do Problema
+      description: |
+        Aqui deve ser descrito de forma detalhada o problema.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Comportamento Esperado
+      description: |
+        Descreva aqui o comportamento que você espera
+    validations:
+      required: true
+  - type: textarea
+    id: real
+    attributes:
+      label: Comportamento Real
+      description: |
+        Descreva aqui o que de fato ocorreu
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Para Reproduzir
+      description: Forneça as etapas detalhadas para reproduzir o problema.
+      placeholder: |
+        1. Passo um
+        2. Passo dois
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: firm-version
+    attributes:
+      label: Versão do Firmware
+      description: Versão do Firmware onde o problema ocorreu
+    validations:
+      required: true
+  - type: input
+    id: dfu-version
+    attributes:
+      label: Versão do DFU
+      description: Versão do DFU onde o problema ocorreu
+  - type: input
+    id: ac-model
+    attributes:
+      label: Modelo do AR
+      description: Modelo do AR onde o problema ocorreu
+  - type: dropdown
+    id: repete
+    attributes:
+      label: O bug ocorre SEMPRE que os passos descritos foram realizados?
+      options:
+        - "Sim"
+        - "Não"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs de Debug
+      description: Se possivel e relevante inclua os logs do ESP
+      value: "```LOGS AQUI```"
+  - type: textarea
+    id: extra
+    attributes:
+      label: Informações Complementares
+      description: Adicione informações complementares como modelo do chip, versão do compilador e SDK IDF, SO usado na compilação, etc...
