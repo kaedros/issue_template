@@ -11,33 +11,10 @@ body:
         ## Instruções
         Antes de enviar um novo problema, siga a lista de verificação e tente encontrar a resposta:
 
-  - type: checkboxes
-    id: docs
-    attributes:
-      label: Leitura de Documentação
-      options:
-        - label: Eu li a documentação (Wiki) e o problema não foi abordado.
-
-  - type: checkboxes
-    id: firm-update
-    attributes:
-      label: Firmware Atualizado
-      options:
-        - label: Eu atualizei meu firmware para a versão mais recente e verifiquei se o problema ainda está presente.
-
-  - type: checkboxes
-    id: git-search
-    attributes:
-      label: Busquei Issues
-      options:
-        - label: Pesquisei no GitHub por um problema semelhante e não encontrei.
-
-  - type: checkboxes
-    id: dev-search
-    attributes:
-      label: Conversa com Desenvolvimento
-      options:
-        - label: Busquei informações com a equipe de desenvolvimento e/ou a equipe de manutenção da engenharia e não se tem conhecimento ou solução para o problema.
+        - Leia a documentação (Wiki) e verifique se o problema já foi abordado.
+        - Certifique-se de que seu firmware está atualizado para a versão mais recente.
+        - Busque por issues semelhantes no Git antes de criar uma nova.
+        - Consulte a equipe de desenvolvimento e/ou manutenção para verificar se já há conhecimento ou solução para o problema.
 
   - type: markdown
     attributes:
@@ -89,11 +66,11 @@ body:
         ## Ambiente
 
   - type: input
-    id: clp-firm-version
+    id: firm-version
     attributes:
-      label: CLP Firmware
+      label: Versão de Firmware
       description: Nome e versão do CLP Firmware onde o problema ocorreu.
-      placeholder: Convencional - 01.03.00035
+      placeholder: briseII - 01.01.00001
     validations:
       required: true
 
@@ -102,21 +79,7 @@ body:
     attributes:
       label: Modelo do dispositivo
       description: Modelo do dispositivo onde o problema ocorreu.
-      placeholder: Conflex Light GSM
-
-  - type: input
-    id: web-firm-version
-    attributes:
-      label: Web Firmware
-      description: Nome e versão do Web Firmware onde o problema ocorreu.
-      placeholder: EM1206 - 3.60.06
-
-  - type: input
-    id: web-app-version
-    attributes:
-      label: Web Aplicativo
-      description: Nome e versão do Web Aplicativo onde o problema ocorreu.
-      placeholder: NCC - 2.16.0087
+      placeholder: Brise II
 
   - type: markdown
     attributes:
@@ -139,7 +102,13 @@ body:
       required: false
 
   - type: input
-    id: pic-model
+    id: mcu-model
     attributes:
-      label: Modelo do PIC
-      value: PIC24FJ256GB110
+      label: Modelo do Microcontrolador
+      value: ESP32-WROOM-32E-N8
+  
+  - type: input
+    id: compiler
+    attributes:
+      label: Versão do compilador
+      value: IDF 5.4.0
