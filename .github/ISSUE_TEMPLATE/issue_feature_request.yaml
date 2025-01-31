@@ -6,13 +6,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 🚀 Solicitação de Nova Funcionalidade  
+        ## Solicitação de Nova Funcionalidade  
         Obrigado por contribuir! Por favor, preencha as informações abaixo para nos ajudar a entender sua solicitação.
 
   - type: textarea
     id: problem
     attributes:
-      label: "Qual problema essa funcionalidade resolveria?"
+      label: "Qual Problema essa Funcionalidade Resolveria"
       description: "Explique o problema ou necessidade que essa nova funcionalidade abordaria."
       placeholder: "Exemplo: Atualmente, o sistema não permite X, o que dificulta Y. Uma solução ajudaria a fazer Z."
     validations:
@@ -44,6 +44,13 @@ body:
       placeholder: "Exemplo: Links para documentação, capturas de tela ou diagramas."
     validations:
       required: false
+ 
+  - type: input
+    id: client
+    attributes:
+      label: "Cliente Relacionado"
+      description: "Essa solicitação vem de um cliente específico? Se sim, informe o nome do cliente."
+      placeholder: "Exemplo: Vivo"
 
   - type: markdown
     attributes:
