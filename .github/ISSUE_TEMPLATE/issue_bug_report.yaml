@@ -1,46 +1,49 @@
 name: "Bug Report :bug:"
 title: "Título - Descrição Resumida"
 description: "Reporte de problemas e funcionalidades não conforme"
-labels: bug 💊
+labels:
+  - bug
+
 body:
   - type: markdown
     attributes:
       value: |
         ## Instruções
         Antes de enviar um novo problema, siga a lista de verificação e tente encontrar a resposta:
+
   - type: checkboxes
     id: docs
     attributes:
       label: Leitura de Documentação
       options:
         - label: Eu li a documentação (Wiki) e o problema não foi abordado.
-          required: true
+
   - type: checkboxes
     id: firm-update
     attributes:
       label: Firmware Atualizado
       options:
         - label: Eu atualizei meu firmware para a versão mais recente e verifiquei se o problema ainda está presente.
-          required: true
+
   - type: checkboxes
     id: git-search
     attributes:
       label: Busquei Issues
       options:
-        - label: Pesquisei no git por um problema semelhante e não encontrei.
-          required: true
+        - label: Pesquisei no GitHub por um problema semelhante e não encontrei.
+
   - type: checkboxes
     id: dev-search
     attributes:
       label: Conversa com Desenvolvimento
       options:
         - label: Busquei informações com a equipe de desenvolvimento e/ou a equipe de manutenção da engenharia e não se tem conhecimento ou solução para o problema.
-          required: true 
-  
+
   - type: markdown
     attributes:
       value: |
-        ## Problema 
+        ## Problema
+
   - type: textarea
     id: description
     attributes:
@@ -49,85 +52,94 @@ body:
         Aqui deve ser descrito de forma detalhada o problema.
     validations:
       required: true
+
   - type: textarea
     id: behavior
     attributes:
       label: Comportamento Esperado
       description: |
-        Descreva aqui o comportamento que você espera
+        Descreva aqui o comportamento que você espera.
     validations:
       required: true
+
   - type: textarea
     id: real
     attributes:
       label: Comportamento Real
       description: |
-        Descreva aqui o que de fato ocorreu
+        Descreva aqui o que de fato ocorreu.
     validations:
       required: true
+
   - type: textarea
     id: reproduce
     attributes:
       label: Para Reproduzir
       description: Forneça as etapas detalhadas para reproduzir o problema.
       placeholder: |
-        1. Passo um
-        2. Passo dois
-        3. ...
+        1. Descreva o primeiro passo
+        2. Explique o segundo passo
+        3. Continue até o erro ser reproduzido
     validations:
       required: true
-  
+
   - type: markdown
     attributes:
       value: |
         ## Ambiente
+
   - type: input
     id: clp-firm-version
     attributes:
       label: CLP Firmware
-      description: Nome e versão do CLP Firmware onde o problema ocorreu
+      description: Nome e versão do CLP Firmware onde o problema ocorreu.
       placeholder: Convencional - 01.03.00035
     validations:
       required: true
+
   - type: input
     id: model
     attributes:
       label: Modelo do dispositivo
-      description: Modelo do dispositivo
-      placeholder: Conflex Light GSM  
+      description: Modelo do dispositivo onde o problema ocorreu.
+      placeholder: Conflex Light GSM
+
   - type: input
     id: web-firm-version
     attributes:
       label: Web Firmware
-      description: Nome e versão do Web Firmwar onde o problema ocorreu
+      description: Nome e versão do Web Firmware onde o problema ocorreu.
       placeholder: EM1206 - 3.60.06
+
   - type: input
     id: web-app-version
     attributes:
       label: Web Aplicativo
-      description: Nome e versão do Web Aplicativo onde o problema ocorreu
+      description: Nome e versão do Web Aplicativo onde o problema ocorreu.
       placeholder: NCC - 2.16.0087
 
   - type: markdown
     attributes:
       value: |
-        ## Desenvolvimento 
+        ## Desenvolvimento
+
   - type: textarea
     id: logs
     attributes:
       label: Logs de Debug
-      description: Se possivel e relevante inclua os logs
+      description: Se possível e relevante, inclua os logs.
+    validations:
+      required: false
+
   - type: textarea
     id: extra
     attributes:
       label: Informações Complementares
+    validations:
+      required: false
+
   - type: input
     id: pic-model
     attributes:
       label: Modelo do PIC
       value: PIC24FJ256GB110
-  - type: input
-    id: compiler
-    attributes:
-      label: Versão do compilador
-      value: CCS 4.104
