@@ -6,47 +6,46 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Solicitação de Nova Funcionalidade  
-        Obrigado por contribuir! Por favor, preencha as informações abaixo para nos ajudar a entender sua solicitação.  
+        ## 🚀 Solicitação de Nova Funcionalidade  
+        Obrigado por contribuir! Por favor, preencha as informações abaixo para nos ajudar a entender sua solicitação.
 
   - type: textarea
     id: problem
     attributes:
-      label: Qual problema essa funcionalidade resolveria?
-      description: Explique o problema ou necessidade que essa nova funcionalidade abordaria.
-      placeholder: |
-        Exemplo: Atualmente, o sistema não permite X, o que dificulta Y. Uma solução ajudaria a fazer Z.
+      label: "Qual problema essa funcionalidade resolveria?"
+      description: "Explique o problema ou necessidade que essa nova funcionalidade abordaria."
+      placeholder: "Exemplo: Atualmente, o sistema não permite X, o que dificulta Y. Uma solução ajudaria a fazer Z."
     validations:
       required: true
 
   - type: textarea
     id: proposal
     attributes:
-      label: Descrição da Funcionalidade
-      description: Explique a funcionalidade desejada e como ela deve se comportar.
-      placeholder: |
-        Exemplo: Adicionar um botão no painel para permitir que o usuário faça XYZ de forma mais eficiente.
+      label: "Descrição da Funcionalidade"
+      description: "Explique a funcionalidade desejada e como ela deve se comportar."
+      placeholder: "Exemplo: Adicionar um botão no painel para permitir que o usuário faça XYZ de forma mais eficiente."
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternativas Consideradas
-      description: Existem outras formas de resolver esse problema? Se sim, descreva-as.
-      placeholder: |
-        Exemplo: Poderíamos também resolver isso adicionando um atalho no menu lateral.
+      label: "Alternativas Consideradas"
+      description: "Existem outras formas de resolver esse problema? Se sim, descreva-as."
+      placeholder: "Exemplo: Poderíamos também resolver isso adicionando um atalho no menu lateral."
     validations:
       required: false
 
   - type: textarea
     id: additional
     attributes:
-      label: Informações Adicionais
-      description: Algum detalhe extra ou referência para essa solicitação?
-      placeholder: Exemplo: Links para documentação, capturas de tela ou diagramas.
+      label: "Informações Adicionais"
+      description: "Algum detalhe extra ou referência para essa solicitação?"
+      placeholder: "Exemplo: Links para documentação, capturas de tela ou diagramas."
+    validations:
+      required: false
 
   - type: markdown
     attributes:
       value: |
-        **📌 Observação:** Nem todas as solicitações poderão ser implementadas imediatamente. A equipe de desenvolvimento avaliará a viabilidade e impacto da funcionalidade.  
+        **📌 Observação:** Nem todas as solicitações poderão ser implementadas imediatamente. A equipe de desenvolvimento avaliará a viabilidade e impacto da funcionalidade.
