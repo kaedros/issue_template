@@ -1,9 +1,7 @@
 name: "Bug Report"
 title: "Título - Descrição Resumida"
 description: "Reporte de problemas e funcionalidades não conforme"
-labels:
-  - bug
-
+labels: bug
 body:
   - type: markdown
     attributes:
